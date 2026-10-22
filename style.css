@@ -10,24 +10,12 @@
 body { 
   margin: 0; 
   font-family: 'Work Sans', sans-serif; 
-}
-
-
-
-.phone {
-  width: min(100%, 398px);
-  min-height: 760px;
-  border: 9px solid #252326;
-  border-radius: 48px;
-  background: #fff;
-  box-shadow: 0 34px 85px rgba(87, 43, 42, .19), 0 7px 22px rgba(87, 43, 42, .10);
-  overflow: hidden;
-  position: relative;
+  background: #ffffff;
 }
 
 .stage {
   min-height: 100vh;
-  background: #ffffff; /* Белый фон на весь экран */
+  background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -35,83 +23,36 @@ body {
 
 .phone {
   width: 100%;
-  max-width: 480px; /* Ограничение по ширине, чтобы на ПК сайт выглядел аккуратно, как карточка */
+  max-width: 480px;
   min-height: 100vh;
-  border: none; /* Убираем рамку телефона */
+  border: none;
   border-radius: 0;
   background: #fff;
-  box-shadow: none; /* Убираем тень телефона */
+  box-shadow: none;
   overflow: visible;
   position: relative;
 }
 
-/* Удаляем верхнюю «чёлку» телефона */
-.phone::before {
-  display: none; 
-}
-
 .phone-content { 
-  padding: 40px 24px 40px; /* Уменьшаем отступы сверху, так как челки больше нет */
-}
-.phone-content { 
-  padding: 102px 30px 54px; 
+  padding: 40px 24px 40px; 
 }
 
-.ornament { 
-  width: 188px; 
-  height: 138px; 
-  margin: 0 auto; 
-  position: relative; 
-  color: var(--red); 
+/* Стили для адаптивного логотипа */
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.ornament::before, .ornament::after {
-  content: ""; 
-  position: absolute; 
-  left: 50%; 
-  transform: translateX(-50%);
-  width: 126px; 
-  height: 1px; 
-  background: currentColor;
+.brand-logo {
+  width: 100%;
+  max-width: 220px; /* Максимальный размер логотипа под ширину кнопок */
+  height: auto;     /* Автоматическая высота для сохранения пропорций */
+  object-fit: contain;
+  display: block;
 }
-
-.ornament::before { top: 8px; }
-.ornament::after { bottom: 8px; }
-
-.diamonds { 
-  position: absolute; 
-  inset: 23px 4px; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-}
-
-.diamond {
-  width: 69px; 
-  height: 69px; 
-  border: 3px solid currentColor; 
-  transform: rotate(45deg);
-  display: grid; 
-  place-items: center; 
-  flex: none; 
-  background: #fff;
-}
-
-.diamond + .diamond { margin-left: -11px; }
-.diamond:nth-child(2) { width: 77px; height: 77px; z-index: 1; }
-.diamond span { transform: rotate(-45deg); display: block; line-height: 1; }
-
-.ornament .tick {
-  position: absolute; 
-  width: 7px; 
-  height: 7px; 
-  background: currentColor;
-  transform: rotate(45deg); 
-  left: calc(50% - 3.5px);
-}
-
-.tick.top { top: 2px; } 
-.tick.bottom { bottom: 2px; }
 
 .link-card {
   border: 1.5px solid var(--red);
@@ -128,8 +69,14 @@ body {
   box-shadow: 0 8px 0 rgba(199,31,49,.07), 0 13px 22px rgba(72,34,36,.09);
 }
 
-.link-card:active { transform: translateY(0); }
-.link-card:focus-visible { outline: 3px solid #272328; outline-offset: 4px; }
+.link-card:active { 
+  transform: translateY(0); 
+}
+
+.link-card:focus-visible { 
+  outline: 3px solid #272328; 
+  outline-offset: 4px; 
+}
 
 .link-icon { 
   width: 25px; 
@@ -139,13 +86,8 @@ body {
   flex: none; 
 }
 
-@media (max-width: 500px) {
-  .stage { display: block; background: #fff; }
-  .phone { width: 100%; min-height: calc(100 * min(var(--vh, 1vh), 1vh)); border: 0; border-radius: 0; box-shadow: none; }
-  .phone::before { display: none; }
-  .phone-content { padding: 74px 28px 55px; max-width: 430px; margin: 0 auto; }
-}
-
 @media (prefers-reduced-motion: reduce) { 
-  .link-card { transition: none; } 
+  .link-card { 
+    transition: none; 
+  } 
 }

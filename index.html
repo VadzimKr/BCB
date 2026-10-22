@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
   <!-- Подключение библиотеки иконок Lucide -->
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
-  <!-- Подключение Tailwind CSS для служебных классов (flex, px-4 и т.д.) -->
+  <!-- Подключение Tailwind CSS для служебных классов -->
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
 </head>
 <body class="w-full">
@@ -18,33 +18,38 @@
     <main class="phone" aria-label="BCB social links">
       <div class="phone-content">
         <header class="text-center">
-          <header class="text-center">
-            <div class="logo-container">
-              <img src="logo.png" alt="BCB Community Logo" class="brand-logo">
-            </div>
-          <h1 class="canva-text mt-7 font-semibold tracking-tight">Знайдзі нас анлайн</h1>
-          <p class="canva-text mt-2">Будзем на сувязі з BCB</p>
+          <!-- Блок с новым резиновым логотипом -->
+          <div class="logo-container">
+            <img src="logo.png" alt="BCB Community Logo" class="brand-logo">
+          </div>
+          <h1 class="canva-text mt-7 font-semibold tracking-tight text-xl">Знайдзі нас анлайн</h1>
+          <p class="canva-text mt-2 text-gray-600">Будзем на сувязі з BCB</p>
         </header>
 
-        <nav aria-label="Social and website links" class="mt-11 flex flex-col gap-4">
+        <nav aria-label="Social and website links" class="mt-8 flex flex-col gap-4">
+          <!-- Instagram -->
           <a class="link-card flex items-center gap-5 px-6 no-underline" href="https://www.instagram.com/bcb_polska/" target="_blank" rel="noopener noreferrer">
             <i data-lucide="instagram" class="link-icon" aria-hidden="true"></i>
             <span class="canva-text font-semibold">Instagram</span>
           </a> 
+          <!-- Telegram -->
           <a class="link-card flex items-center gap-5 px-6 no-underline" href="https://t.me/business2belarus" target="_blank" rel="noopener noreferrer">
             <i data-lucide="send" class="link-icon" aria-hidden="true"></i>
             <span class="canva-text font-semibold">Telegram</span>
           </a> 
+          <!-- Facebook -->
           <a class="link-card flex items-center gap-5 px-6 no-underline" href="https://www.facebook.com/profile.php?id=100091953180111" target="_blank" rel="noopener noreferrer">
             <i data-lucide="facebook" class="link-icon" aria-hidden="true"></i>
             <span class="canva-text font-semibold">Facebook</span>
           </a> 
+          <!-- LinkedIn -->
           <a class="link-card flex items-center gap-5 px-6 no-underline" href="https://www.linkedin.com/company/bcb-community" target="_blank" rel="noopener noreferrer">
             <i data-lucide="linkedin" class="link-icon" aria-hidden="true"></i>
             <span class="canva-text font-semibold">LinkedIn</span>
           </a> 
+          <!-- BCB Website -->
           <a class="link-card flex items-center gap-5 px-6 no-underline" href="https://bcb-community.org/" target="_blank" rel="noopener noreferrer">
-            <i data-lucide="globe-2" class="link-icon" aria-hidden="true"></i>
+            <i data-lucide="globe" class="link-icon" aria-hidden="true"></i>
             <span class="canva-text font-semibold">BCB website</span>
           </a>
         </nav>

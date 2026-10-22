@@ -12,10 +12,7 @@ body {
   font-family: 'Work Sans', sans-serif; 
 }
 
-.stage {
-  min-height: calc(100 * min(var(--vh, 1vh), 1vh));
-  background: radial-gradient(circle at 50% 44%, #fff 0%, #faf4f2 46%, #f0e6e3 100%);
-}
+
 
 .phone {
   width: min(100%, 398px);
@@ -28,19 +25,34 @@ body {
   position: relative;
 }
 
-.phone::before {
-  content: "";
-  position: absolute;
-  top: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 89px;
-  height: 23px;
-  border-radius: 20px;
-  background: #252326;
-  z-index: 2;
+.stage {
+  min-height: 100vh;
+  background: #ffffff; /* Белый фон на весь экран */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
+.phone {
+  width: 100%;
+  max-width: 480px; /* Ограничение по ширине, чтобы на ПК сайт выглядел аккуратно, как карточка */
+  min-height: 100vh;
+  border: none; /* Убираем рамку телефона */
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none; /* Убираем тень телефона */
+  overflow: visible;
+  position: relative;
+}
+
+/* Удаляем верхнюю «чёлку» телефона */
+.phone::before {
+  display: none; 
+}
+
+.phone-content { 
+  padding: 40px 24px 40px; /* Уменьшаем отступы сверху, так как челки больше нет */
+}
 .phone-content { 
   padding: 102px 30px 54px; 
 }
